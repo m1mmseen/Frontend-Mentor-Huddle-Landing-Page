@@ -1,0 +1,155 @@
+@Font-Face {
+    font-family: opensans;
+    src: url("fonts/OpenSans-Regular.ttf");
+font-weight: 400;
+font-style: normal;
+}
+@Font-Face {
+    font-family: poppins;
+    src: url("fonts/Poppins-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+@Font-Face {
+    font-family: poppins;
+    src: url("fonts/Poppins-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+}
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --white: hsl(0, 0%, 95%);
+}
+html {
+    box-sizing: border-box;
+
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--violet);
+    background-image: url("images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    text-align: center;
+    color: var(--white);
+    padding: 2.5rem;
+}
+
+.clearfix {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* --- TEXT --- */
+p {
+    font-family: opensans, sans-serif;
+    line-height: 1.5rem;
+}
+h1 {
+    font-family: poppins, sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/* --- CONTENT --- */
+
+img {
+    margin: 2rem 0;
+}
+
+header img {
+    width: 50%;
+    float: left;
+}
+
+.container img {
+    width: 100%;
+}
+
+button {
+    padding: 1rem;
+    width: 70%;
+    border-radius: 50px;
+    margin: 1rem 0;
+    border: none;
+    box-shadow: 2px 2px 5px 1px hsl(257, 40%, 39%);
+    color: var(--violet);
+    letter-spacing: .05rem;
+}
+
+footer {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+
+.social-icon:hover i {
+    color: var(--soft-magenta);
+}
+.social-icon:hover {
+    background-color: var(--soft-magenta);
+}
+
+@media screen and (min-width: 768px){
+    body {
+        background-image: url("images/bg-desktop.svg");
+        background-size: cover;
+        height: 100svh;
+    }
+
+    header img {
+        width: 200px;
+    }
+
+    .container img {
+        width: 500px;
+    }
+
+    button {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .container *{
+        flex: 1;
+    }
+
+    body {
+        position: relative;
+    }
+    footer {
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+    }
+
+}
+
+
+
+
+
